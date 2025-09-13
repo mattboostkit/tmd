@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Heart, Users, Star, ArrowRight, Sparkles, Rainbow } from 'lucide-react';
+import { Heart, Users, Star, ArrowRight, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
