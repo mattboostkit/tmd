@@ -11,7 +11,7 @@ import { BLOG_POST_QUERY, BLOG_POST_SLUGS_QUERY } from '../../../lib/sanity.quer
 import { getClient, urlForImage } from '../../../lib/sanity.client';
 import type { BlogPost } from '../../../lib/types';
 
-export const revalidate = 60 * 30;
+export const revalidate = 1800; // 30 minutes
 
 const fetchPost = cache(async (slug: string): Promise<BlogPost | null> => {
   try {
@@ -37,8 +37,9 @@ export async function generateStaticParams() {
   }
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = await fetchPost(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await fetchPost(slug);
 
   if (!post) {
     return {
@@ -93,7 +94,7 @@ const components = {
     },
   },
   marks: {
-    link: ({ value, children }: { value: { href: string }; children: ReactNode }) => {
+    link: ({ value, children }: { value?: { href?: string }; children?: ReactNode }) => {
       const href = value?.href || '#';
       const isExternal = href.startsWith('http');
       return (
@@ -109,21 +110,21 @@ const components = {
     },
   },
   block: {
-    h2: ({ children }: { children: ReactNode }) => (
+    h2: ({ children }: { children?: ReactNode }) => (
       <h2 className="text-3xl font-bold text-gray-900 mt-10 mb-4">{children}</h2>
     ),
-    h3: ({ children }: { children: ReactNode }) => (
+    h3: ({ children }: { children?: ReactNode }) => (
       <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-3">{children}</h3>
     ),
-    normal: ({ children }: { children: ReactNode }) => (
+    normal: ({ children }: { children?: ReactNode }) => (
       <p className="text-lg leading-8 text-gray-700 mb-6">{children}</p>
     ),
   },
   list: {
-    bullet: ({ children }: { children: ReactNode }) => (
+    bullet: ({ children }: { children?: ReactNode }) => (
       <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">{children}</ul>
     ),
-    number: ({ children }: { children: ReactNode }) => (
+    number: ({ children }: { children?: ReactNode }) => (
       <ol className="list-decimal pl-6 space-y-2 text-gray-700 mb-6">{children}</ol>
     ),
   },
@@ -131,8 +132,9 @@ const components = {
 
 const dateFormatter = new Intl.DateTimeFormat('en-GB', { dateStyle: 'long' });
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await fetchPost(params.slug);
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await fetchPost(slug);
 
   if (!post) {
     notFound();

@@ -40,7 +40,8 @@ export const getClient = (preview = false) => {
   return baseClient ?? createClient(sanityConfig);
 };
 
-const builder = sanityConfig ? imageUrlBuilder(sanityConfig) : null;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const builder = sanityConfig && sanityConfig.projectId ? imageUrlBuilder(sanityConfig as any) : null;
 
 export const urlForImage = (source: SanityImageSource) => {
   if (!builder) {

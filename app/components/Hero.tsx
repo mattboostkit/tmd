@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Heart, ArrowRight, Play, Users, Calendar, Target } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
@@ -62,10 +63,12 @@ const Hero = () => {
             animate={{ opacity: currentSlide === index ? 1 : 0 }}
             transition={{ duration: 1 }}
           >
-            <img
+            <Image
               src={slide.image}
               alt={slide.title}
-              className="w-full h-full object-cover"
+              fill
+              priority={index === 0}
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
           </motion.div>

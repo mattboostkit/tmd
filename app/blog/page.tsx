@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'Follow the latest updates from Taylor Made Dreams, discover new family stories, fundraising ideas, and expert advice for supporting children with life-limiting conditions.',
 };
 
-export const revalidate = 60 * 30; // Revalidate every 30 minutes.
+export const revalidate = 1800; // Revalidate every 30 minutes.
 
 async function getBlogPosts(): Promise<BlogPostPreview[]> {
   try {

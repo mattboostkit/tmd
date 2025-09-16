@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Quote, Heart, Calendar, MapPin, Play, Star } from 'lucide-react';
 
 const Stories = () => {
@@ -129,10 +130,11 @@ const Stories = () => {
               <div className="grid lg:grid-cols-2">
                 {/* Image/Video Side */}
                 <div className="relative h-96 lg:h-auto">
-                  <img
+                  <Image
                     src={story.image}
                     alt={story.name}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
@@ -210,9 +212,11 @@ const Stories = () => {
                   {/* Parent Testimonial */}
                   <div className="border-t pt-6">
                     <div className="flex items-start gap-4">
-                      <img
+                      <Image
                         src={story.parent.image}
                         alt={story.parent.name}
+                        width={48}
+                        height={48}
                         className="w-12 h-12 rounded-full object-cover"
                       />
                       <div className="flex-1">

@@ -5,6 +5,7 @@
 import { useState, useEffect } from 'react';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { Menu, X, Heart, Phone, Mail, ChevronDown, ChevronRight, Gift, HandHeart, Home, BookOpen, Newspaper, PenSquare } from 'lucide-react';
 
@@ -436,11 +437,15 @@ const Header = () => {
 
                             <div className="bg-gray-50 rounded-lg p-4">
 
-                              <img
+                              <Image
 
                                 src={item.megaMenu.featured.image}
 
                                 alt={item.megaMenu.featured.title}
+
+                                width={300}
+
+                                height={128}
 
                                 className="w-full h-32 object-cover rounded-lg mb-4"
 
