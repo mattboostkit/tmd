@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.rockinghorse.org.uk)",
+      "WebFetch(domain:www.chestnut-tree-house.org.uk)",
+      "WebFetch(domain:amazesussex.org.uk)",
+      "Bash(npm run dev:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

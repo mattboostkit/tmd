@@ -9,9 +9,15 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@portabletext/react": "^3.0.11",
+    "@portabletext/types": "^2.0.8",
+    "@sanity/client": "^6.18.2",
+    "@sanity/image-url": "^1.0.2",
     "framer-motion": "^12.23.12",
+    "groq": "^3.36.4",
     "lucide-react": "^0.544.0",
     "next": "15.5.3",
+    "next-sanity": "^9.0.7",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },

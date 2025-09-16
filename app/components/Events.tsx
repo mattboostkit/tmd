@@ -77,7 +77,7 @@ const Events = () => {
   };
 
   return (
-    <section id="news" className="py-20 bg-white">
+    <section id="news" className="py-20 bg-white scroll-mt-24">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="mb-4 text-purple-700">News & Events</h2>

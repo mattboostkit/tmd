@@ -70,7 +70,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-white scroll-mt-24">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="mb-4" style={{ color: '#772477' }}>What We Do</h2>

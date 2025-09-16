@@ -60,7 +60,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact-form" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white scroll-mt-24">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="mb-4" style={{ color: '#772477' }}>Get in Touch</h2>

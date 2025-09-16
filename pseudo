@@ -1,0 +1,2 @@
+npm create sanity@latest -- --project nzkjg3l9 --dataset production --template clean --typescript --output-path studio-tmd
+cd studio-tmd
