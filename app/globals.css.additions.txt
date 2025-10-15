@@ -1,0 +1,82 @@
+/* Add these fun, playful elements at the end of globals.css */
+
+/* Sparkle effect for interactive elements */
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+  50% { opacity: 0.8; transform: scale(1.1) rotate(180deg); }
+}
+
+.sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+/* Heart beat animation for donation buttons */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  10%, 30% { transform: scale(0.95); }
+  20%, 40% { transform: scale(1.05); }
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* Playful card hover effects */
+.card-playful {
+  @apply bg-white rounded-2xl shadow-sm transition-all duration-300;
+  border: 2px solid transparent;
+}
+
+.card-playful:hover {
+  border-color: var(--accent);
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 20px 40px rgba(119, 36, 118, 0.15);
+}
+
+/* Fun gradient text */
+.text-gradient-fun {
+  background: var(--gradient-fun);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Decorative blobs */
+.blob-decoration {
+  position: absolute;
+  border-radius: 40% 60% 70% 30% / 60% 30% 70% 40%;
+  filter: blur(50px);
+  opacity: 0.15;
+  animation: blob-morph 8s ease-in-out infinite;
+}
+
+@keyframes blob-morph {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 60% 40% 30% 70% / 30% 60% 40% 70%;
+  }
+}
+
+/* Playful button variations */
+.btn-fun {
+  background: var(--gradient-accent);
+  @apply text-white font-bold rounded-2xl px-6 py-3;
+  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-fun:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
+}
+
+/* Friendly rounded elements */
+.rounded-friendly {
+  border-radius: 20px;
+}
+
+.rounded-friendly-lg {
+  border-radius: 30px;
+}

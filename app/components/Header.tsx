@@ -284,92 +284,55 @@ const Header = () => {
     <>
 
       {/* Top Bar */}
-
-      <div className="w-full bg-gradient-to-r from-teal-700 to-teal-800 text-white">
-
-        <div className="container flex justify-between items-center text-sm py-2">
-
-          <div className="flex items-center gap-6">
-
-            <a href="tel:01892956460" className="flex items-center gap-1.5 hover:text-yellow-300 transition-colors">
-
-              <Phone size={14} />
-
+      <div className="w-full bg-gradient-to-r from-purple-700 to-pink-600 text-white">
+        <div className="container flex justify-between items-center text-sm py-2.5">
+          <div className="flex items-center gap-4 md:gap-6">
+            <a href="tel:01892956460" className="flex items-center gap-2 hover:text-yellow-200 transition-colors">
+              <Phone size={15} />
               <span className="font-medium">01892 956 460</span>
-
             </a>
-
-            <a href="mailto:hello@taylormadedreams.org.uk" className="hidden sm:flex items-center gap-1.5 hover:text-yellow-300 transition-colors">
-
-              <Mail size={14} />
-
+            <a href="mailto:hello@taylormadedreams.org.uk" className="hidden sm:flex items-center gap-2 hover:text-yellow-200 transition-colors">
+              <Mail size={15} />
               <span className="font-medium">hello@taylormadedreams.org.uk</span>
-
             </a>
-
           </div>
 
           <div className="flex items-center gap-3">
-
-            <span className="hidden md:block text-xs uppercase tracking-wider opacity-80">Registered Charity No. 1158178</span>
-
+            <span className="hidden md:block text-xs font-medium opacity-90">Registered Charity No. 1158178</span>
           </div>
-
         </div>
-
       </div>
 
 
 
       {/* Main Header */}
-
       <header
-
-        className={`sticky top-0 w-full bg-white z-40 transition-all duration-300 ${
-
-          isScrolled ? 'shadow-lg py-3' : 'py-4 shadow-sm'
-
+        className={`sticky top-0 w-full bg-white z-40 transition-all duration-300 border-b-2 border-purple-100 ${
+          isScrolled ? 'shadow-xl py-2' : 'py-3 shadow-md'
         }`}
-
       >
-
         <div className="container">
-
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-4">
 
             {/* Logo */}
-
-            <Link href="/" className="flex items-center gap-3">
-
-              <div className="w-14 h-14 bg-gradient-to-br from-teal-600 to-teal-700 rounded-lg flex items-center justify-center">
-
-                <span className="text-white font-bold text-2xl">TMD</span>
-
+            <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-purple-600 to-pink-500 rounded-xl flex items-center justify-center shadow-md">
+                <span className="text-white font-bold text-xl md:text-2xl">TMD</span>
               </div>
-
               <div className="flex flex-col">
-
-                <span className="text-xl font-bold text-gray-900">
-
+                <span className="text-lg md:text-xl font-bold text-purple-700">
                   Taylor Made Dreams
-
                 </span>
-
-                <span className="text-xs text-gray-600">
-
+                <span className="text-xs text-gray-600 hidden sm:block">
                   Sussex Children&apos;s Charity
-
                 </span>
-
               </div>
-
             </Link>
 
 
 
             {/* Desktop Navigation */}
-
-          <nav className="hidden lg:flex items-center gap-1" aria-label="Primary">
+            <nav className="hidden lg:flex items-center gap-1" aria-label="Primary">
               {navigation.map((item) => (
 
                 <div
@@ -385,26 +348,18 @@ const Header = () => {
                 >
 
                   <Link
-
                     href={item.href}
-
-                    className="flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-teal-700 transition-colors font-medium"
-
+                    className="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-all font-medium text-sm"
                   >
-
                     {item.name}
-
                     {item.megaMenu && <ChevronDown size={14} className="opacity-60" />}
-
                   </Link>
 
 
 
                   {/* Mega Menu */}
-
                   {item.megaMenu && activeMegaMenu === item.name && (
-
-                    <div className="absolute top-full left-0 mt-0 w-screen max-w-4xl bg-white shadow-2xl rounded-b-lg border-t-4 border-teal-600">
+                    <div className="absolute top-full left-0 mt-0 w-screen max-w-4xl bg-white shadow-2xl rounded-b-2xl border-t-4 border-purple-600">
 
                       <div className="p-8">
 
@@ -434,16 +389,11 @@ const Header = () => {
 
                                       >
 
-                                        <div className="font-medium text-gray-700 group-hover:text-teal-600 transition-colors">
-
+                                        <div className="font-medium text-gray-700 group-hover:text-purple-700 transition-colors">
                                           {link.name}
-
                                         </div>
-
                                         <div className="text-sm text-gray-500 group-hover:text-gray-600">
-
                                           {link.description}
-
                                         </div>
 
                                       </Link>
@@ -495,23 +445,14 @@ const Header = () => {
                               </p>
 
                               <Link
-
                                 href={item.megaMenu.featured.link}
-
-                                className="text-teal-600 font-medium text-sm hover:text-teal-700"
-
+                                className="text-purple-600 font-medium text-sm hover:text-purple-700"
                                 aria-label={`Learn more about ${item.megaMenu.featured.title}`}
-
                               >
-
                                 <span className="inline-flex items-center gap-1">
-
                                   Learn more
-
                                   <ChevronRight size={16} aria-hidden="true" />
-
                                 </span>
-
                               </Link>
 
                             </div>
@@ -535,21 +476,13 @@ const Header = () => {
 
 
             {/* CTA Buttons */}
-
-            <div className="flex items-center gap-3">
-
+            <div className="flex items-center gap-2">
               <Link
-
                 href="#donate"
-
-                className="btn-donate hidden md:flex"
-
+                className="btn-donate hidden md:inline-flex items-center"
               >
-
-                <Heart size={18} className="mr-2" />
-
-                Donate Now
-
+                <Heart size={16} className="mr-1.5" />
+                Donate
               </Link>
 
 
@@ -598,25 +531,15 @@ const Header = () => {
                 <div key={item.name} className="border-b last:border-b-0">
 
                   <Link
-
                     href={item.href}
-
-                    className="flex items-center justify-between py-4 text-gray-700 hover:text-teal-600 transition-colors font-medium"
-
+                    className="flex items-center justify-between py-4 text-gray-700 hover:text-purple-700 hover:bg-purple-50 rounded-lg px-4 transition-all font-medium"
                     onClick={() => setIsMobileMenuOpen(false)}
-
                   >
-
                     <span className="flex items-center gap-3">
-
                       <item.icon size={20} />
-
                       {item.name}
-
                     </span>
-
                     {item.megaMenu && <ChevronDown size={16} />}
-
                   </Link>
 
                   {item.megaMenu && (
@@ -636,19 +559,12 @@ const Header = () => {
                           {section.links.map((link) => (
 
                             <Link
-
                               key={link.name}
-
                               href={link.href}
-
-                              className="block px-8 py-2 text-sm text-gray-600 hover:text-teal-600 hover:bg-gray-50 transition-colors"
-
+                              className="block px-8 py-2 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors"
                               onClick={() => setIsMobileMenuOpen(false)}
-
                             >
-
                               {link.name}
-
                             </Link>
 
                           ))}
