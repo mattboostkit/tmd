@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { Menu, X, Heart, Phone, Mail, ChevronDown, ChevronRight, Gift, HandHeart, Home, BookOpen, Newspaper, PenSquare } from 'lucide-react';
+import { Menu, X, Heart, Phone, Mail, ChevronDown, ChevronRight, Gift, HandHeart, Home, BookOpen, Newspaper, PenSquare, MapPin } from 'lucide-react';
 
 
 const Header = () => {
