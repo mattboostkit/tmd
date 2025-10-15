@@ -175,7 +175,7 @@ const Support = () => {
           </form>
 
           <p className="text-sm text-gray-500 mt-6 text-center">
-            All donations are processed securely. Taylor Made Dreams is a registered charity in England & Wales (Charity No. 1158178).
+            All donations are processed securely. Taylor Made Dreams is a registered charity in England &amp; Wales (Charity No. 1158178).
           </p>
         </div>
 

@@ -31,11 +31,11 @@ const Footer = () => {
   ];
 
   const legalLinks = [
-    { name: 'Privacy Policy', href: '#privacy' },
-    { name: 'Terms & Conditions', href: '#terms' },
-    { name: 'Cookie Policy', href: '#cookies' },
-    { name: 'Safeguarding Policy', href: '#safeguarding' },
-    { name: 'Complaints Procedure', href: '#complaints' },
+    { name: 'Privacy Policy', href: '/legal/privacy' },
+    { name: 'Terms & Conditions', href: '/legal/terms' },
+    { name: 'Cookie Policy', href: '/legal/cookies' },
+    { name: 'Safeguarding Policy', href: '/legal/safeguarding' },
+    { name: 'Complaints Procedure', href: '/legal/complaints' },
   ];
 
   const certifications = [
@@ -121,11 +121,11 @@ const Footer = () => {
             <div className="text-sm text-gray-500">
               <p className="flex items-center gap-2 mb-2">
                 <Shield size={16} className="text-teal-500" />
-                Registered Charity No. 1234567
+                Registered Charity No. 1158178
               </p>
               <p className="flex items-center gap-2">
                 <Award size={16} className="text-yellow-500" />
-                Est. 2009
+                Est. 2014
               </p>
             </div>
           </div>
@@ -203,9 +203,9 @@ const Footer = () => {
               <div className="flex items-start gap-2 text-gray-400 text-sm">
                 <MapPin size={16} className="mt-0.5 flex-shrink-0 text-teal-500" />
                 <span>
-                  Community Centre<br />
+                  Office 60, Basepoint<br />
                   Pine Grove, Crowborough<br />
-                  East Sussex TN6 1FE
+                  East Sussex TN6 1DH
                 </span>
               </div>
             </div>

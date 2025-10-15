@@ -25,9 +25,10 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Using Formspree as the backend service (replace with your actual endpoint)
-    // To make this work, sign up at https://formspree.io/ and get your form ID
-    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+    // Using Formspree as the backend service
+    // Set NEXT_PUBLIC_FORMSPREE_FORM_ID in your .env.local file
+    // See SETUP_GUIDE.md for detailed instructions
+    const FORMSPREE_ENDPOINT = `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID || 'YOUR_FORM_ID'}`;
 
     try {
       const response = await fetch(FORMSPREE_ENDPOINT, {
@@ -108,9 +109,9 @@ const Contact = () => {
                   <h4 className="font-semibold mb-1">Office</h4>
                   <p className="text-gray-600">
                     Taylor Made Dreams<br />
-                    Community Centre, Pine Grove<br />
-                    Crowborough, East Sussex<br />
-                    TN6 1FE
+                    Office 60, Basepoint<br />
+                    Pine Grove, Crowborough<br />
+                    East Sussex TN6 1DH
                   </p>
                 </div>
               </div>

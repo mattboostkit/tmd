@@ -71,7 +71,7 @@ const Stats = () => {
   ];
 
   const trustBadges = [
-    { name: "Charity Commission", logo: "CC", description: "Registered Charity #1234567" },
+    { name: "Charity Commission", logo: "CC", description: "Registered Charity No. 1158178" },
     { name: "Fundraising Regulator", logo: "FR", description: "Committed to best practice" },
     { name: "Living Wage", logo: "LW", description: "Accredited Living Wage Employer" },
     { name: "ISO 9001", logo: "ISO", description: "Quality Management Certified" },

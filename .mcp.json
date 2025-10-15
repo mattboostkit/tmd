@@ -1,0 +1,35 @@
+{
+  "mcpServers": {
+    "chrome-devtools": {
+      "type": "stdio",
+      "command": "npx.cmd",
+      "args": [
+        "chrome-devtools-mcp@latest"
+      ],
+      "env": {}
+    },
+    "context7": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@upstash/context7-mcp",
+        "--api-key",
+        "ctx7sk-07a53930-f1eb-47c3-9663-db7175baa596"
+      ],
+      "env": {}
+    },
+    "bright-data": {
+      "type": "stdio",
+      "command": "npx.cmd",
+      "args": [
+        "@brightdata/mcp"
+      ],
+      "env": {
+        "API_TOKEN": "06d5905c03bc20b51e9928cb82911b1ffb55d444d42df7b15cf850d96dd1c099"
+      }
+    }
+  }
+}

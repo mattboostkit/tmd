@@ -240,6 +240,37 @@ const Header = () => {
       icon: PenSquare,
     },
     {
+      name: 'Regions',
+      href: '#regions',
+      icon: MapPin,
+      megaMenu: {
+        sections: [
+          {
+            title: 'Our Regions',
+            links: [
+              { name: 'Sussex', href: '/#about', description: 'Our home county - serving families since 2009' },
+              { name: 'Essex', href: '/regions/essex', description: 'Expanding support across Essex communities' },
+              { name: 'Kent', href: '#kent', description: 'Supporting families throughout Kent' },
+            ]
+          },
+          {
+            title: 'How We Help',
+            links: [
+              { name: 'Find Support Near You', href: '#contact', description: 'Get in touch with your local team' },
+              { name: 'Regional Events', href: '#news', description: 'Events happening in your area' },
+              { name: 'Local Partnerships', href: '#partners', description: 'Hospitals and organisations we work with' },
+            ]
+          }
+        ],
+        featured: {
+          title: 'Expanding Across the South East',
+          description: 'We\'re growing to support more families in Essex, Kent, and beyond',
+          image: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=400',
+          link: '/regions/essex'
+        }
+      }
+    },
+    {
       name: 'Contact',
       href: '#contact',
       icon: Phone,
@@ -280,7 +311,7 @@ const Header = () => {
 
           <div className="flex items-center gap-3">
 
-            <span className="hidden md:block text-xs uppercase tracking-wider opacity-80">Registered Charity #1234567</span>
+            <span className="hidden md:block text-xs uppercase tracking-wider opacity-80">Registered Charity No. 1158178</span>
 
           </div>
 
