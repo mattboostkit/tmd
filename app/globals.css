@@ -311,7 +311,9 @@ input, textarea, select {
 }
 
 input:focus, textarea:focus, select:focus {
-  @apply outline-none border-teal-500 ring-2 ring-teal-100 bg-white;
+  @apply outline-none bg-white;
+  border-color: var(--primary);
+  ring: 2px solid rgba(119, 36, 118, 0.1);
 }
 
 label {
@@ -345,14 +347,14 @@ label {
 
 /* Professional gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #00313C 0%, #4ECDC4 100%);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-secondary {
-  background: linear-gradient(135deg, #FCB53B 0%, #FFD700 100%);
+  background: var(--gradient-secondary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -374,11 +376,13 @@ label {
 }
 
 .badge-primary {
-  @apply bg-teal-100 text-teal-800;
+  background-color: rgba(119, 36, 118, 0.1);
+  color: var(--primary-dark);
 }
 
 .badge-secondary {
-  @apply bg-yellow-100 text-yellow-800;
+  background-color: rgba(255, 184, 77, 0.15);
+  color: var(--secondary-dark);
 }
 
 /* Mega menu styles */
@@ -423,12 +427,12 @@ label {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #00313C 0%, #004d5c 100%);
+  background: var(--gradient-primary);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #001f26 0%, #00313C 100%);
+  background: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 100%);
 }
 
 /* Loading states */
@@ -471,5 +475,89 @@ label {
 
 /* Focus styles */
 *:focus-visible {
-  @apply outline-none ring-2 ring-teal-500 ring-offset-2;
+  @apply outline-none ring-2 ring-offset-2;
+  --tw-ring-color: var(--primary);
+}
+
+/* Add these fun, playful elements */
+
+/* Sparkle effect for interactive elements */
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+  50% { opacity: 0.8; transform: scale(1.1) rotate(180deg); }
+}
+
+.sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+/* Heart beat animation for donation buttons */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  10%, 30% { transform: scale(0.95); }
+  20%, 40% { transform: scale(1.05); }
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* Playful card hover effects */
+.card-playful {
+  @apply bg-white rounded-2xl shadow-sm transition-all duration-300;
+  border: 2px solid transparent;
+}
+
+.card-playful:hover {
+  border-color: var(--accent);
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 20px 40px rgba(119, 36, 118, 0.15);
+}
+
+/* Fun gradient text */
+.text-gradient-fun {
+  background: var(--gradient-fun);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Decorative blobs */
+.blob-decoration {
+  position: absolute;
+  border-radius: 40% 60% 70% 30% / 60% 30% 70% 40%;
+  filter: blur(50px);
+  opacity: 0.15;
+  animation: blob-morph 8s ease-in-out infinite;
+}
+
+@keyframes blob-morph {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 60% 40% 30% 70% / 30% 60% 40% 70%;
+  }
+}
+
+/* Playful button variations */
+.btn-fun {
+  background: var(--gradient-accent);
+  @apply text-white font-bold rounded-2xl px-6 py-3;
+  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-fun:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
+}
+
+/* Friendly rounded elements */
+.rounded-friendly {
+  border-radius: 20px;
+}
+
+.rounded-friendly-lg {
+  border-radius: 30px;
 }
