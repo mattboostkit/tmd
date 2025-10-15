@@ -253,9 +253,8 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex flex-wrap gap-4 text-xs">
               {legalLinks.map((link, index) => (
-                <>
+                <div key={link.name} className="flex items-center gap-4">
                   <Link
-                    key={link.name}
                     href={link.href}
                     className="text-gray-500 hover:text-white transition-colors"
                   >
@@ -264,7 +263,7 @@ const Footer = () => {
                   {index < legalLinks.length - 1 && (
                     <span className="text-gray-700">|</span>
                   )}
-                </>
+                </div>
               ))}
             </div>
             <div className="text-xs text-gray-500">

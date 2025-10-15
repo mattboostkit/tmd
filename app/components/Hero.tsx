@@ -130,15 +130,15 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
-            <Link href="#donate" className="btn-donate group">
+            <Link href="#donate" className="btn btn-primary group inline-flex items-center whitespace-nowrap">
               <Heart className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" aria-hidden="true" />
               Make a Donation
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </Link>
 
             <button
               onClick={() => setVideoModalOpen(true)}
-              className="btn bg-white/10 backdrop-blur-md text-white border-2 border-white/30 hover:bg-white/20"
+              className="btn bg-white/10 backdrop-blur-md text-white border-2 border-white/30 hover:bg-white/20 inline-flex items-center whitespace-nowrap"
               type="button"
             >
               <Play className="w-5 h-5 mr-2" />
