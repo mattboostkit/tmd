@@ -38,8 +38,8 @@ const Stats = () => {
       suffix: "+",
       label: "Dreams Fulfilled",
       description: "Life-changing experiences delivered",
-      color: "text-red-600",
-      bgColor: "bg-red-50"
+      color: "text-brand-600",
+      bgColor: "bg-brand-100"
     },
     {
       icon: Users,
@@ -47,8 +47,8 @@ const Stats = () => {
       suffix: "+",
       label: "Families Supported",
       description: "Families given hope and joy",
-      color: "text-teal-600",
-      bgColor: "bg-teal-50"
+      color: "text-teal-500",
+      bgColor: "bg-teal-200/40"
     },
     {
       icon: TrendingUp,
@@ -56,8 +56,8 @@ const Stats = () => {
       suffix: "%",
       label: "Impact Rate",
       description: "Of families report improved wellbeing",
-      color: "text-green-600",
-      bgColor: "bg-green-50"
+      color: "text-sunrise-500",
+      bgColor: "bg-sunrise-300/30"
     },
     {
       icon: Clock,
@@ -65,8 +65,8 @@ const Stats = () => {
       suffix: "+",
       label: "Years of Service",
       description: "Dedicated to Sussex families",
-      color: "text-blue-600",
-      bgColor: "bg-blue-50"
+      color: "text-brand-600",
+      bgColor: "bg-cloud-50"
     },
   ];
 
@@ -117,8 +117,8 @@ const Stats = () => {
         className="py-20 section-gradient relative overflow-hidden scroll-mt-24"
       >
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-teal-500 rounded-full filter blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-yellow-500 rounded-full filter blur-3xl" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-teal-200/40 rounded-full filter blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gold-300/40 rounded-full filter blur-3xl" />
         </div>
 
         <div className="container relative z-10">
@@ -186,23 +186,23 @@ const Stats = () => {
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6">
-                  <Award className="w-10 h-10 text-teal-600 mb-3" />
-                  <div className="text-2xl font-bold text-gray-900">Â£2.3M</div>
+                <div className="bg-gradient-to-br from-teal-200 to-white rounded-xl p-6">
+                  <Award className="w-10 h-10 text-teal-500 mb-3" />
+                  <div className="text-2xl font-bold text-gray-900">£2.3M</div>
                   <div className="text-sm text-gray-600">Raised this year</div>
                 </div>
-                <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-6">
-                  <Gift className="w-10 h-10 text-yellow-600 mb-3" />
+                <div className="bg-gradient-to-br from-gold-300 to-white rounded-xl p-6">
+                  <Gift className="w-10 h-10 text-gold-400 mb-3" />
                   <div className="text-2xl font-bold text-gray-900">89</div>
                   <div className="text-sm text-gray-600">Wishes granted</div>
                 </div>
-                <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6">
-                  <Users className="w-10 h-10 text-purple-600 mb-3" />
+                <div className="bg-gradient-to-br from-brand-100 to-white rounded-xl p-6">
+                  <Users className="w-10 h-10 text-brand-600 mb-3" />
                   <div className="text-2xl font-bold text-gray-900">450+</div>
                   <div className="text-sm text-gray-600">Volunteers</div>
                 </div>
-                <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6">
-                  <Shield className="w-10 h-10 text-green-600 mb-3" />
+                <div className="bg-gradient-to-br from-sunrise-300 to-white rounded-xl p-6">
+                  <Shield className="w-10 h-10 text-sunrise-500 mb-3" />
                   <div className="text-2xl font-bold text-gray-900">100%</div>
                   <div className="text-sm text-gray-600">Transparent</div>
                 </div>
@@ -213,7 +213,7 @@ const Stats = () => {
       </section>
 
       {/* Trust Badges Section */}
-      <section className="py-12 bg-gray-50 border-y">
+      <section className="py-12 bg-cloud-50 border-y">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-center md:text-left">
@@ -230,7 +230,7 @@ const Stats = () => {
                   className="group cursor-pointer"
                 >
                   <div className="trust-badge hover:shadow-md transition-all">
-                    <div className="w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center font-bold text-gray-700 group-hover:from-teal-100 group-hover:to-teal-200 transition-all">
+                    <div className="w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center font-bold text-gray-700 group-hover:from-teal-200 group-hover:to-teal-400 transition-all">
                       {badge.logo}
                     </div>
                     <div className="ml-3">

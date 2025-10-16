@@ -45,7 +45,7 @@ const Events = () => {
       date: "January 10, 2024",
       excerpt: "2023 marked our most impactful year yet, with over 100 children's dreams brought to life.",
       category: "Impact",
-      color: "text-purple-600",
+      color: "text-brand-600",
     },
     {
       title: "New Partnership with Local Businesses",
@@ -80,14 +80,14 @@ const Events = () => {
     <section id="news" className="py-20 bg-white scroll-mt-24">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="mb-4 text-purple-700">News & Events</h2>
+          <h2 className="mb-4 text-brand-600">News & Events</h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-medium">
             Stay updated with our latest news and join us at upcoming events to support our mission.
           </p>
         </div>
 
         <div className="mb-16">
-          <h3 className="text-3xl font-bold mb-8 text-center text-purple-700">Upcoming Events</h3>
+          <h3 className="text-3xl font-bold mb-8 text-center text-brand-600">Upcoming Events</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event, index) => (
               <div
@@ -104,23 +104,23 @@ const Events = () => {
                   <span className={`inline-block px-4 py-1.5 rounded-full text-xs font-bold mb-3 ${getTypeStyles(event.type)}`}>
                     {event.type}
                   </span>
-                  <h4 className="text-xl font-bold mb-3 text-purple-700">{event.title}</h4>
+                  <h4 className="text-xl font-bold mb-3 text-brand-600">{event.title}</h4>
                   <p className="text-gray-600 mb-4">{event.description}</p>
                   <div className="space-y-2 text-sm text-gray-600">
                     <div className="flex items-center gap-2">
-                      <Calendar size={16} className="text-purple-500" />
+                      <Calendar size={16} className="text-brand-500" />
                       <span className="font-medium">{event.date}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Clock size={16} className="text-purple-500" />
+                      <Clock size={16} className="text-brand-500" />
                       <span className="font-medium">{event.time}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <MapPin size={16} className="text-purple-500" />
+                      <MapPin size={16} className="text-brand-500" />
                       <span className="font-medium">{event.location}</span>
                     </div>
                   </div>
-                  <button className="mt-4 text-purple-600 font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                  <button className="mt-4 text-brand-600 font-bold flex items-center gap-1 hover:gap-2 transition-all">
                     Learn More
                     <ArrowRight size={16} />
                   </button>
@@ -131,12 +131,12 @@ const Events = () => {
         </div>
 
         <div>
-          <h3 className="text-3xl font-bold mb-8 text-center text-purple-700">Latest News</h3>
+          <h3 className="text-3xl font-bold mb-8 text-center text-brand-600">Latest News</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {news.map((article, index) => (
               <article
                 key={index}
-                className="bg-gradient-to-b from-purple-50 to-white rounded-2xl p-6 hover-lift animate-fadeInUp border-2 border-purple-100"
+                className="bg-gradient-to-b from-brand-100 to-white rounded-2xl p-6 hover-lift animate-fadeInUp border-2 border-brand-100"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <span className={`text-sm font-bold ${article.color} mb-2 block`}>
@@ -145,9 +145,9 @@ const Events = () => {
                 <p className="text-sm text-gray-500 mb-3">
                   {article.date}
                 </p>
-                <h4 className="text-xl font-bold mb-3 text-purple-700">{article.title}</h4>
+                <h4 className="text-xl font-bold mb-3 text-brand-600">{article.title}</h4>
                 <p className="text-gray-600 mb-4">{article.excerpt}</p>
-                <button className="text-purple-600 font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                <button className="text-brand-600 font-bold flex items-center gap-1 hover:gap-2 transition-all">
                   Read More
                   <ArrowRight size={16} />
                 </button>

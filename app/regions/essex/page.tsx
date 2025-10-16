@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function EssexPage() {
   const essexStats = [
-    { icon: Heart, value: '50+', label: 'Essex Families Supported', color: 'text-red-600', bgColor: 'bg-red-50' },
-    { icon: Gift, value: '35+', label: 'Dreams Fulfilled in Essex', color: 'text-teal-600', bgColor: 'bg-teal-50' },
-    { icon: Users, value: '80+', label: 'Essex Volunteers', color: 'text-purple-600', bgColor: 'bg-purple-50' },
-    { icon: TrendingUp, value: '120%', label: 'Growth in 2024', color: 'text-green-600', bgColor: 'bg-green-50' },
+    { icon: Heart, value: '50+', label: 'Essex Families Supported', color: 'text-brand-600', bgColor: 'bg-brand-100' },
+    { icon: Gift, value: '35+', label: 'Dreams Fulfilled in Essex', color: 'text-teal-500', bgColor: 'bg-teal-200/40' },
+    { icon: Users, value: '80+', label: 'Essex Volunteers', color: 'text-brand-600', bgColor: 'bg-brand-100' },
+    { icon: TrendingUp, value: '120%', label: 'Growth in 2024', color: 'text-sunrise-500', bgColor: 'bg-sunrise-300/30' },
   ];
 
   const essexAreas = [
@@ -79,16 +79,16 @@ export default function EssexPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-teal-700 to-teal-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-brand-600 to-brand-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-500 rounded-full filter blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal-500 rounded-full filter blur-3xl" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-gold-400 rounded-full filter blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal-200/400 rounded-full filter blur-3xl" />
         </div>
 
         <div className="container relative z-10">
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full mb-6">
-              <MapPin size={16} className="text-yellow-300" />
+              <MapPin size={16} className="text-sunrise-300" />
               <span className="text-sm font-medium">Serving Essex Communities</span>
             </div>
 
@@ -159,7 +159,7 @@ export default function EssexPage() {
                   </span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-600">
-                  <Users size={16} className="text-teal-600" />
+                  <Users size={16} className="text-teal-500" />
                   <span>{area.families} families supported</span>
                 </div>
               </div>
@@ -188,7 +188,7 @@ export default function EssexPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <div className="text-sm font-medium text-yellow-300 mb-1">{story.location}</div>
+                    <div className="text-sm font-medium text-sunrise-300 mb-1">{story.location}</div>
                     <h3 className="text-2xl font-bold">{story.name}</h3>
                   </div>
                 </div>
@@ -204,7 +204,7 @@ export default function EssexPage() {
                     </span>
                   </div>
                   <p className="text-gray-700 mb-4">{story.excerpt}</p>
-                  <Link href="/#stories" className="text-teal-600 font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
+                  <Link href="/#stories" className="text-teal-500 font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
                     Read Full Story
                     <ArrowRight size={16} />
                   </Link>
@@ -228,12 +228,12 @@ export default function EssexPage() {
               <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
                 <div className="flex items-start gap-3">
                   <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Home size={24} className="text-teal-600" />
+                    <Home size={24} className="text-teal-500" />
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">{partner.name}</h3>
                     <div className="text-sm text-gray-600">{partner.location}</div>
-                    <div className="text-xs text-teal-600 font-medium mt-1">{partner.type}</div>
+                    <div className="text-xs text-teal-500 font-medium mt-1">{partner.type}</div>
                   </div>
                 </div>
               </div>
@@ -257,13 +257,13 @@ export default function EssexPage() {
                   <Calendar size={32} className="text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{event.title}</h3>
-                <div className="text-sm text-teal-600 font-medium mb-1">{event.date}</div>
+                <div className="text-sm text-teal-500 font-medium mb-1">{event.date}</div>
                 <div className="text-sm text-gray-600 mb-4 flex items-center gap-1">
                   <MapPin size={14} />
                   {event.location}
                 </div>
                 <p className="text-gray-700 text-sm mb-4">{event.description}</p>
-                <Link href="/#news" className="text-teal-600 font-semibold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all">
+                <Link href="/#news" className="text-teal-500 font-semibold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all">
                   Learn More
                   <ArrowRight size={14} />
                 </Link>
@@ -287,10 +287,10 @@ export default function EssexPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-6">
                 <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone size={24} className="text-teal-600" />
+                  <Phone size={24} className="text-teal-500" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">Call Us</h3>
-                <a href="tel:01892956460" className="text-yellow-300 hover:text-yellow-200 transition-colors">
+                <a href="tel:01892956460" className="text-sunrise-300 hover:text-sunrise-200 transition-colors">
                   01892 956 460
                 </a>
                 <p className="text-sm text-white/70 mt-2">Mon-Fri, 9am-5pm</p>
@@ -298,10 +298,10 @@ export default function EssexPage() {
 
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-6">
                 <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail size={24} className="text-teal-600" />
+                  <Mail size={24} className="text-teal-500" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">Email Us</h3>
-                <a href="mailto:essex@taylormadedreams.org.uk" className="text-yellow-300 hover:text-yellow-200 transition-colors text-sm">
+                <a href="mailto:essex@taylormadedreams.org.uk" className="text-sunrise-300 hover:text-sunrise-200 transition-colors text-sm">
                   essex@taylormadedreams.org.uk
                 </a>
                 <p className="text-sm text-white/70 mt-2">We respond within 24 hours</p>
@@ -309,7 +309,7 @@ export default function EssexPage() {
 
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-6">
                 <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users size={24} className="text-teal-600" />
+                  <Users size={24} className="text-teal-500" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">Referral</h3>
                 <p className="text-sm text-white/80">
@@ -323,7 +323,7 @@ export default function EssexPage() {
                 <Heart size={20} className="mr-2" />
                 Request Support
               </Link>
-              <Link href="/#volunteer" className="btn bg-white text-teal-700 hover:bg-gray-100">
+              <Link href="/#volunteer" className="btn bg-white text-brand-600 hover:bg-gray-100">
                 <Users size={20} className="mr-2" />
                 Volunteer in Essex
               </Link>
@@ -335,7 +335,7 @@ export default function EssexPage() {
       {/* Support Essex CTA */}
       <section className="py-16 bg-white">
         <div className="container">
-          <div className="max-w-4xl mx-auto bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8 md:p-12 text-center border-2 border-yellow-200">
+          <div className="max-w-4xl mx-auto bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8 md:p-12 text-center border border-sunrise-300">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Support Our Work in Essex
             </h2>

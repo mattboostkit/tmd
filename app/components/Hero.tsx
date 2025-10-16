@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Heart, ArrowRight, Play, Users, Calendar, Target } from 'lucide-react';
@@ -37,18 +37,23 @@ const Hero = () => {
     }
   ];
 
+  const shouldReduceMotion = useReducedMotion();
+
   useEffect(() => {
+    if (shouldReduceMotion) {
+      return undefined;
+    }
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }, [slides.length, shouldReduceMotion]);
 
   const quickActions = [
-    { icon: Heart, label: "Donate Now", color: "text-red-500", href: "#donate" },
+    { icon: Heart, label: "Donate Now", color: "text-brand-500", href: "#donate" },
     { icon: Users, label: "Volunteer", color: "text-teal-500", href: "#volunteer" },
-    { icon: Calendar, label: "Events", color: "text-yellow-500", href: "#news" },
-    { icon: Target, label: "Our Impact", color: "text-purple-500", href: "#stats-section" }
+    { icon: Calendar, label: "Events", color: "text-sunrise-500", href: "#news" },
+    { icon: Target, label: "Our Impact", color: "text-brand-600", href: "#stats-section" }
   ];
 
   return (
@@ -108,7 +113,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-yellow-300 mb-6"
+            className="text-xl md:text-2xl text-sunrise-300 mb-6"
           >
             {slides[currentSlide].subtitle}
           </motion.p>
@@ -158,11 +163,11 @@ const Hero = () => {
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white/10 backdrop-blur-md rounded-lg hover:bg-white/20 transition-all"
+                className="bg-white/10 backdrop-blur-md rounded-lg border border-white/10 hover:border-brand-400/40 hover:bg-white/20 transition-all"
               >
                 <Link
                   href={action.href}
-                  className="flex flex-col items-center gap-2 p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 rounded-lg"
+                  className="flex flex-col items-center gap-2 p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-200 rounded-lg"
                 >
                   <action.icon className={`w-6 h-6 ${action.color}`} aria-hidden="true" />
                   <span className="text-white text-sm font-medium text-center">{action.label}</span>
@@ -179,7 +184,7 @@ const Hero = () => {
             className="mt-12 bg-white/10 backdrop-blur-md rounded-xl p-4 inline-flex items-center gap-4"
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-300">
+              <div className="text-3xl font-bold text-sunrise-300">
                 {slides[currentSlide].stats.value}
               </div>
               <div className="text-sm text-white/80">
@@ -197,8 +202,8 @@ const Hero = () => {
               onClick={() => setCurrentSlide(index)}
               className={`h-2 transition-all duration-300 rounded-full ${
                 currentSlide === index
-                  ? 'w-8 bg-yellow-400'
-                  : 'w-2 bg-white/50 hover:bg-white/70'
+                  ? 'w-8 bg-brand-500'
+                  : 'w-2 bg-white/50 hover:bg-brand-200/70'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

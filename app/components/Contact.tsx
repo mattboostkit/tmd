@@ -64,7 +64,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-white scroll-mt-24">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="mb-4" style={{ color: '#772477' }}>Get in Touch</h2>
+          <h2 className="mb-4 text-brand-600">Get in Touch</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Have a question or want to learn more about how we can help? We&apos;d love to hear from you.
           </p>
@@ -77,11 +77,11 @@ const Contact = () => {
             <div className="space-y-6 mb-8">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-gray-100 rounded-lg">
-                  <Phone size={24} style={{ color: '#772477' }} />
+                  <Phone size={24} className="text-brand-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Phone</h4>
-                  <a href="tel:01892956460" className="text-gray-600 hover:text-purple-700">
+                  <a href="tel:01892956460" className="text-gray-600 hover:text-brand-600">
                     01892 956 460
                   </a>
                   <p className="text-sm text-gray-500 mt-1">Monday - Friday, 9am - 5pm</p>
@@ -90,11 +90,11 @@ const Contact = () => {
 
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-gray-100 rounded-lg">
-                  <Mail size={24} style={{ color: '#772477' }} />
+                  <Mail size={24} className="text-brand-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Email</h4>
-                  <a href="mailto:hello@taylormadedreams.org.uk" className="text-gray-600 hover:text-purple-700">
+                  <a href="mailto:hello@taylormadedreams.org.uk" className="text-gray-600 hover:text-brand-600">
                     hello@taylormadedreams.org.uk
                   </a>
                   <p className="text-sm text-gray-500 mt-1">We&apos;ll respond within 24 hours</p>
@@ -103,7 +103,7 @@ const Contact = () => {
 
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-gray-100 rounded-lg">
-                  <MapPin size={24} style={{ color: '#772477' }} />
+                  <MapPin size={24} className="text-brand-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Office</h4>
@@ -143,7 +143,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-700 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-200 focus:border-brand-600 outline-none transition"
                   />
                 </div>
                 <div>
@@ -157,7 +157,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-700 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-200 focus:border-brand-600 outline-none transition"
                   />
                 </div>
               </div>
@@ -173,7 +173,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-700 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-200 focus:border-brand-600 outline-none transition"
                   />
                 </div>
                 <div>
@@ -186,7 +186,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-700 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-200 focus:border-brand-600 outline-none transition"
                   >
                     <option value="">Select a subject</option>
                     <option value="family-support">Family Support Services</option>
@@ -210,7 +210,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent outline-none transition resize-none"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-200 focus:border-brand-600 outline-none transition resize-none"
                   placeholder="Tell us how we can help..."
                 />
               </div>

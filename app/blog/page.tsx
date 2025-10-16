@@ -35,7 +35,7 @@ export default async function BlogIndexPage() {
 
   return (
     <div className="pb-24">
-      <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-light)] text-white">
+      <section className="bg-gradient-to-br from-brand-600 to-brand-400 text-white">
         <div className="container py-16 md:py-24">
           <div className="max-w-3xl space-y-4">
             <p className="uppercase tracking-wide text-sm text-yellow-200 font-semibold">Insights &amp; Stories</p>
@@ -69,7 +69,7 @@ export default async function BlogIndexPage() {
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-teal-100 to-yellow-100">
-                  <span className="text-lg font-semibold text-[var(--primary)]">New Taylor Made Dreams Story</span>
+                  <span className="text-lg font-semibold text-brand-600">New Taylor Made Dreams Story</span>
                 </div>
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -94,9 +94,9 @@ export default async function BlogIndexPage() {
             </div>
             <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 flex flex-col justify-between">
               <div className="space-y-4">
-                <p className="text-sm font-semibold text-[var(--primary)] uppercase tracking-wide">Featured story</p>
+                <p className="text-sm font-semibold text-brand-600 uppercase tracking-wide">Featured story</p>
                 <h2 className="text-3xl font-bold text-gray-900">
-                  <Link href={`/blog/${featured.slug}`} className="hover:text-[var(--primary)]">
+                  <Link href={`/blog/${featured.slug}`} className="hover:text-brand-600">
                     {featured.title}
                   </Link>
                 </h2>
@@ -105,11 +105,15 @@ export default async function BlogIndexPage() {
               <div className="mt-8 flex flex-wrap items-center justify-between gap-4 text-sm text-gray-500">
                 <div className="space-x-2">
                   {featured.author?.name && <span>{featured.author.name}</span>}
-                  {featured.author?.jobTitle && <span className="text-gray-400">ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· {featured.author.jobTitle}</span>}
+                  {featured.author?.jobTitle && (
+                  <span className="text-gray-400" aria-label="Author role">
+                    Â· {featured.author.jobTitle}
+                  </span>
+                )}
                 </div>
                 <Link
                   href={`/blog/${featured.slug}`}
-                  className="btn btn-outline text-[var(--primary)] border-[var(--primary)] hover:text-white hover:bg-[var(--primary)]"
+                  className="btn btn-outline text-brand-600 border-brand-600 hover:text-white hover:bg-brand-600"
                 >
                   Read full story
                 </Link>
@@ -137,7 +141,7 @@ export default async function BlogIndexPage() {
           <div className="space-y-6">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-bold text-gray-900">Latest articles</h2>
-              <Link href="/#contact" className="text-sm font-semibold text-[var(--primary)] hover:underline">
+              <Link href="/#contact" className="text-sm font-semibold text-brand-600 hover:underline">
                 Subscribe for updates
               </Link>
             </div>
@@ -156,7 +160,7 @@ export default async function BlogIndexPage() {
                     ) : null}
                   </div>
                   <div className="p-6 space-y-3">
-                    <div className="flex flex-wrap gap-2 text-xs uppercase tracking-wide text-[var(--primary)]/80">
+                    <div className="flex flex-wrap gap-2 text-xs uppercase tracking-wide text-brand-600/80">
                       {post.categories?.map((category) => (
                         <span key={category._id} className="px-2.5 py-1 bg-[var(--muted)] rounded-full">
                           {category.title}
@@ -164,7 +168,7 @@ export default async function BlogIndexPage() {
                       ))}
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900">
-                      <Link href={`/blog/${post.slug}`} className="hover:text-[var(--primary)]">
+                      <Link href={`/blog/${post.slug}`} className="hover:text-brand-600">
                         {post.title}
                       </Link>
                     </h3>

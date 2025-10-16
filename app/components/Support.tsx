@@ -12,8 +12,8 @@ const supportWays = [
     title: 'Make a Donation',
     description: 'Your donation helps us fulfil dreams and support families.',
     action: 'Donate Now',
-    color: 'bg-red-50',
-    iconColor: 'text-red-500',
+    color: 'bg-brand-100',
+    iconColor: 'text-brand-600',
     href: '#donate-form',
     anchorId: 'donate',
   },
@@ -22,8 +22,8 @@ const supportWays = [
     title: 'Volunteer',
     description: 'Join our team of amazing volunteers making a difference.',
     action: 'Join Us',
-    color: 'bg-blue-50',
-    iconColor: 'text-blue-500',
+    color: 'bg-teal-200/40',
+    iconColor: 'text-teal-500',
     href: '#volunteer',
     anchorId: 'volunteer',
   },
@@ -32,8 +32,8 @@ const supportWays = [
     title: 'Fundraise',
     description: 'Organise or take part in fundraising events in your community.',
     action: 'Start Fundraising',
-    color: 'bg-green-50',
-    iconColor: 'text-green-500',
+    color: 'bg-sunrise-300/30',
+    iconColor: 'text-sunrise-500',
     href: '#news',
     anchorId: 'fundraise',
   },
@@ -42,8 +42,8 @@ const supportWays = [
     title: 'Leave a Legacy',
     description: 'Include Taylor Made Dreams in your will and create lasting impact.',
     action: 'Legacy Giving',
-    color: 'bg-purple-50',
-    iconColor: 'text-purple-500',
+    color: 'bg-cloud-50',
+    iconColor: 'text-brand-500',
     href: '#legacy',
     anchorId: 'legacy',
   },
@@ -52,8 +52,8 @@ const supportWays = [
     title: 'Regular Giving',
     description: 'Set up a monthly donation to provide ongoing support.',
     action: 'Monthly Giving',
-    color: 'bg-orange-50',
-    iconColor: 'text-orange-500',
+    color: 'bg-gold-300/30',
+    iconColor: 'text-gold-400',
     href: '#monthly',
     anchorId: 'monthly',
   },
@@ -62,8 +62,8 @@ const supportWays = [
     title: 'Corporate Partnership',
     description: 'Partner with us to empower more families across the South East.',
     action: 'Partner With Us',
-    color: 'bg-indigo-50',
-    iconColor: 'text-indigo-500',
+    color: 'bg-brand-200/30',
+    iconColor: 'text-brand-600',
     href: '#corporate',
     anchorId: 'corporate',
   },
@@ -85,21 +85,21 @@ const Support = () => {
 
   const handleDonation = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(`Processing donation of £${selectedAmount}`);
-    alert(`Thank you for your donation of £${selectedAmount}! This demo would normally redirect to a secure payment processor.`);
+    console.log(`Processing donation of Â£${selectedAmount}`);
+    alert(`Thank you for your donation of Â£${selectedAmount}! This demo would normally redirect to a secure payment processor.`);
   };
 
   const currentImpact =
     impactExamples.find((example) => example.amount === selectedAmount) ??
     (selectedAmount
-      ? { amount: selectedAmount, impact: `Your generous donation of £${selectedAmount} keeps our programmes running.` }
+      ? { amount: selectedAmount, impact: `Your generous donation of Â£${selectedAmount} keeps our programmes running.` }
       : null);
 
   return (
     <section id="donate" className="py-20 bg-[var(--muted)] scroll-mt-24">
       <div className="container">
         <div className="text-center mb-12 max-w-3xl mx-auto">
-          <h2 className="mb-4" style={{ color: '#772477' }}>Support Our Mission</h2>
+          <h2 className="mb-4 text-brand-600">Support Our Mission</h2>
           <p className="text-xl text-gray-600">
             There are so many ways to help us bring dreams to life. Every contribution, big or small, creates tangible impact for the children and families we support.
           </p>
@@ -122,13 +122,12 @@ const Support = () => {
                         setDonationAmount(amount);
                         setCustomAmount('');
                       }}
-                      className={`py-3 px-4 rounded-lg border-2 font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 ${
-                        isSelected ? 'border-purple-700 bg-purple-700 text-white' : 'border-gray-300 hover:border-purple-700'
+                      className={`py-3 px-4 rounded-lg border-2 font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-200 ${
+                        isSelected ? 'border-brand-600 bg-brand-600 text-white shadow-lg' : 'border-slate-200 text-slate-600 hover:border-brand-500 hover:text-brand-600'
                       }`}
-                      style={isSelected ? { backgroundColor: '#772477', borderColor: '#772477' } : {}}
                       aria-pressed={isSelected}
                     >
-                      £{amount}
+                      Â£{amount}
                     </button>
                   );
                 })}
@@ -144,7 +143,7 @@ const Support = () => {
                     setCustomAmount(event.target.value);
                     setDonationAmount('');
                   }}
-                  className="py-3 px-4 rounded-lg border-2 border-gray-300 focus:border-purple-700 focus:outline-none"
+                  className="py-3 px-4 rounded-lg border-2 border-slate-200 focus:border-brand-600 focus:ring-2 focus:ring-brand-200 focus:outline-none text-slate-600"
                   min="1"
                   aria-label="Custom donation amount"
                 />
@@ -161,7 +160,7 @@ const Support = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <button type="submit" className="btn btn-primary w-full">
                 <Heart size={20} className="mr-2" aria-hidden="true" />
-                Donate £{selectedAmount || '0'} Once
+                Donate Â£{selectedAmount || '0'} Once
               </button>
               <button
                 type="button"
@@ -169,7 +168,7 @@ const Support = () => {
                 onClick={() => alert('Monthly donation setup would be implemented here.')}
               >
                 <Heart size={20} className="mr-2" aria-hidden="true" />
-                Donate £{selectedAmount || '0'} Monthly
+                Donate Â£{selectedAmount || '0'} Monthly
               </button>
             </div>
           </form>
@@ -184,13 +183,13 @@ const Support = () => {
             <article
               key={way.title}
               id={way.anchorId}
-              className={`${way.color} p-6 rounded-xl hover:shadow-lg transition-all duration-300 focus-within:ring-2 focus-within:ring-purple-300`}
+              className={`${way.color} p-6 rounded-xl hover:shadow-lg transition-all duration-300 focus-within:ring-2 focus-within:ring-brand-200`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <way.icon size={40} className={`${way.iconColor} mb-4`} aria-hidden="true" />
               <h4 className="text-xl font-bold mb-2">{way.title}</h4>
               <p className="text-gray-700 mb-4">{way.description}</p>
-              <Link href={way.href} className="font-semibold inline-flex items-center gap-2 text-[var(--primary)] hover:underline">
+              <Link href={way.href} className="font-semibold inline-flex items-center gap-2 text-brand-600 hover:underline">
                 {way.action}
                 <ArrowRight size={18} aria-hidden="true" />
               </Link>

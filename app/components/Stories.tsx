@@ -176,7 +176,7 @@ const Stories = () => {
                           {story.location}
                         </span>
                         <span className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4 text-purple-600" />
+                          <Calendar className="w-4 h-4 text-brand-600" />
                           {story.date}
                         </span>
                       </div>
@@ -198,7 +198,7 @@ const Stories = () => {
                       {story.quote}
                     </p>
                     <cite className="text-sm font-medium text-gray-900">
-                      â€” {story.name.split("'")[0]}
+                      Ã¢â¬â {story.name.split("'")[0]}
                     </cite>
                   </blockquote>
 

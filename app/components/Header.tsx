@@ -284,14 +284,14 @@ const Header = () => {
     <>
 
       {/* Top Bar */}
-      <div className="w-full bg-gradient-to-r from-purple-700 to-pink-600 text-white">
+      <div className="w-full bg-gradient-to-r from-brand-600 to-sunrise-500 text-white">
         <div className="container flex justify-between items-center text-sm py-2.5">
           <div className="flex items-center gap-4 md:gap-6">
-            <a href="tel:01892956460" className="flex items-center gap-2 hover:text-yellow-200 transition-colors">
+            <a href="tel:01892956460" className="flex items-center gap-2 hover:text-sunrise-300 transition-colors">
               <Phone size={15} />
               <span className="font-medium">01892 956 460</span>
             </a>
-            <a href="mailto:hello@taylormadedreams.org.uk" className="hidden sm:flex items-center gap-2 hover:text-yellow-200 transition-colors">
+            <a href="mailto:hello@taylormadedreams.org.uk" className="hidden sm:flex items-center gap-2 hover:text-sunrise-300 transition-colors">
               <Mail size={15} />
               <span className="font-medium">hello@taylormadedreams.org.uk</span>
             </a>
@@ -307,7 +307,7 @@ const Header = () => {
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 w-full bg-white z-40 transition-all duration-300 border-b-2 border-purple-100 ${
+        className={`sticky top-0 w-full bg-white z-40 transition-all duration-300 border-b-2 border-brand-100 ${
           isScrolled ? 'shadow-xl py-2' : 'py-3 shadow-md'
         }`}
       >
@@ -316,11 +316,11 @@ const Header = () => {
 
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-              <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-purple-600 to-pink-500 rounded-xl flex items-center justify-center shadow-md">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-brand-600 to-sunrise-500 rounded-xl flex items-center justify-center shadow-md">
                 <span className="text-white font-bold text-xl md:text-2xl">TMD</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-lg md:text-xl font-bold text-purple-700">
+                <span className="text-lg md:text-xl font-bold text-brand-600">
                   Taylor Made Dreams
                 </span>
                 <span className="text-xs text-gray-600 hidden sm:block">
@@ -349,7 +349,7 @@ const Header = () => {
 
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-all font-medium text-sm"
+                    className="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-brand-600 hover:bg-brand-100 rounded-lg transition-all font-medium text-sm"
                   >
                     {item.name}
                     {item.megaMenu && <ChevronDown size={14} className="opacity-60" />}
@@ -359,7 +359,7 @@ const Header = () => {
 
                   {/* Mega Menu */}
                   {item.megaMenu && activeMegaMenu === item.name && (
-                    <div className="absolute top-full left-0 mt-0 w-screen max-w-4xl bg-white shadow-2xl rounded-b-2xl border-t-4 border-purple-600">
+                    <div className="absolute top-full left-0 mt-0 w-screen max-w-4xl bg-white shadow-2xl rounded-b-2xl border-t-4 border-brand-600">
 
                       <div className="p-8">
 
@@ -389,7 +389,7 @@ const Header = () => {
 
                                       >
 
-                                        <div className="font-medium text-gray-700 group-hover:text-purple-700 transition-colors">
+                                        <div className="font-medium text-gray-700 group-hover:text-brand-600 transition-colors">
                                           {link.name}
                                         </div>
                                         <div className="text-sm text-gray-500 group-hover:text-gray-600">
@@ -446,7 +446,7 @@ const Header = () => {
 
                               <Link
                                 href={item.megaMenu.featured.link}
-                                className="text-purple-600 font-medium text-sm hover:text-purple-700"
+                                className="text-brand-600 font-medium text-sm hover:text-brand-600"
                                 aria-label={`Learn more about ${item.megaMenu.featured.title}`}
                               >
                                 <span className="inline-flex items-center gap-1">
@@ -532,7 +532,7 @@ const Header = () => {
 
                   <Link
                     href={item.href}
-                    className="flex items-center justify-between py-4 text-gray-700 hover:text-purple-700 hover:bg-purple-50 rounded-lg px-4 transition-all font-medium"
+                    className="flex items-center justify-between py-4 text-gray-700 hover:text-brand-600 hover:bg-brand-100 rounded-lg px-4 transition-all font-medium"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     <span className="flex items-center gap-3">
@@ -561,7 +561,7 @@ const Header = () => {
                             <Link
                               key={link.name}
                               href={link.href}
-                              className="block px-8 py-2 text-sm text-gray-600 hover:text-purple-700 hover:bg-purple-50 rounded-lg transition-colors"
+                              className="block px-8 py-2 text-sm text-gray-600 hover:text-brand-600 hover:bg-brand-100 rounded-lg transition-colors"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               {link.name}

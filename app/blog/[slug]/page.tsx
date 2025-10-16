@@ -102,7 +102,7 @@ const components = {
           href={href}
           target={isExternal ? '_blank' : undefined}
           rel={isExternal ? 'noopener noreferrer' : undefined}
-          className="text-[var(--primary)] underline underline-offset-2 hover:text-[var(--primary-light)]"
+          className="text-brand-600 underline underline-offset-2 hover:text-brand-400"
         >
           {children}
         </a>
@@ -142,7 +142,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <article className="pb-24">
-      <header className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-light)] text-white">
+      <header className="bg-gradient-to-br from-brand-600 to-brand-400 text-white">
         <div className="container py-16 md:py-24 space-y-6">
           <div className="flex flex-wrap gap-2 text-xs uppercase tracking-wide text-yellow-200">
             {post.categories?.map((category) => (
@@ -156,7 +156,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </h1>
           <div className="text-sm text-white/80 flex flex-wrap items-center gap-2">
             {post.author?.name && <span>{post.author.name}</span>}
-            {post.author?.jobTitle && <span className="text-white/60">ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· {post.author.jobTitle}</span>}
+            {post.author?.jobTitle && (
+            <span className="text-white/60" aria-label="Author role">
+              Â· {post.author.jobTitle}
+            </span>
+          )}
             {post.publishedAt && (
               <span className="mx-2 text-white/50">|</span>
             )}

@@ -267,7 +267,7 @@ const Footer = () => {
               ))}
             </div>
             <div className="text-xs text-gray-500">
-              ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© {new Date().getFullYear()} Taylor Made Dreams. All rights reserved. Website by Professional Design Co.
+              &copy; {new Date().getFullYear()} Taylor Made Dreams. All rights reserved. Website by Professional Design Co.
             </div>
           </div>
         </div>

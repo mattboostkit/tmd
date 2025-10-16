@@ -8,63 +8,63 @@ const Services = () => {
       icon: Sparkles,
       title: "Wish Fulfillment",
       description: "Making dreams come true with personalized experiences tailored to each child's unique wishes.",
-      color: "bg-purple-50",
-      iconColor: "text-purple-600",
+      color: "bg-brand-100",
+      iconColor: "text-brand-600",
     },
     {
       icon: Home,
       title: "Family Respite",
       description: "Providing families with much-needed breaks and quality time together in comfortable settings.",
-      color: "bg-green-50",
-      iconColor: "text-green-500",
+      color: "bg-teal-200/40",
+      iconColor: "text-teal-500",
     },
     {
       icon: Camera,
       title: "Memory Making",
       description: "Creating lasting memories through photography, video, and special keepsake projects.",
-      color: "bg-purple-50",
-      iconColor: "text-purple-500",
+      color: "bg-sunrise-300/30",
+      iconColor: "text-sunrise-500",
     },
     {
       icon: Users,
       title: "Sibling Support",
       description: "Dedicated programs ensuring siblings feel included, supported, and valued.",
-      color: "bg-yellow-50",
-      iconColor: "text-yellow-600",
+      color: "bg-gold-300/30",
+      iconColor: "text-gold-400",
     },
     {
       icon: Heart,
       title: "Bereavement Support",
       description: "Compassionate support for families during and after their loss.",
-      color: "bg-red-50",
-      iconColor: "text-red-500",
+      color: "bg-cloud-50",
+      iconColor: "text-brand-500",
     },
     {
       icon: Sun,
       title: "Day Trips & Activities",
       description: "Fun-filled days out and activities designed to bring joy and normalcy.",
-      color: "bg-orange-50",
-      iconColor: "text-orange-500",
+      color: "bg-sunrise-300/25",
+      iconColor: "text-sunrise-500",
     },
     {
       icon: Gift,
       title: "Special Occasions",
       description: "Making birthdays, holidays, and milestones extra special with thoughtful celebrations.",
-      color: "bg-pink-50",
-      iconColor: "text-pink-500",
+      color: "bg-brand-200/30",
+      iconColor: "text-brand-500",
     },
     {
       icon: Phone,
       title: "24/7 Support Line",
       description: "Always here when families need someone to talk to, day or night.",
-      color: "bg-purple-100",
-      iconColor: "text-purple-700",
+      color: "bg-brand-100",
+      iconColor: "text-brand-600",
     },
     {
       icon: HandHeart,
       title: "Practical Support",
       description: "Help with everyday challenges, from transport to equipment and resources.",
-      color: "bg-teal-50",
+      color: "bg-teal-200/40",
       iconColor: "text-teal-500",
     },
   ];
@@ -73,7 +73,7 @@ const Services = () => {
     <section id="services" className="py-20 bg-white scroll-mt-24">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="mb-4" style={{ color: '#772477' }}>What We Do</h2>
+          <h2 className="mb-4 text-brand-600">What We Do</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We offer a comprehensive range of services designed to support children with life-limiting conditions and their families at every step of their journey.
           </p>

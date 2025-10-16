@@ -32,7 +32,7 @@ const About = () => {
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slideInLeft space-y-6">
-            <h2 className="mb-2" style={{ color: '#772477' }}>
+            <h2 className="mb-2 text-brand-600">
               About Taylor Made Dreams
             </h2>
             <h3 id="mission" className="text-2xl font-semibold text-gray-900">
@@ -65,7 +65,7 @@ const About = () => {
                 className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fadeIn"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <feature.icon size={40} className="mb-4" style={{ color: '#772477' }} aria-hidden="true" />
+                <feature.icon size={40} className="mb-4 text-brand-500" aria-hidden="true" />
                 <h4 className="text-xl font-semibold mb-2">{feature.title}</h4>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
               </div>

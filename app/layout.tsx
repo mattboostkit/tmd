@@ -1,8 +1,30 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Nunito, Source_Sans_3, Caveat } from "next/font/google";
 import "./globals.css";
 
 const siteUrl = "https://www.taylormadedreams.org.uk";
+
+const headingFont = Nunito({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-heading",
+  weight: ["500", "600", "700", "800", "900"],
+});
+
+const bodyFont = Source_Sans_3({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-body",
+  weight: ["400", "500", "600"],
+});
+
+const accentFont = Caveat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-accent",
+  weight: ["400", "600"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -102,8 +124,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-GB" className="scroll-smooth">
-      <body className="antialiased bg-white text-gray-700">
+    <html
+      lang="en-GB"
+      className={`${headingFont.variable} ${bodyFont.variable} ${accentFont.variable} scroll-smooth`}
+    >
+      <body className="antialiased bg-white text-slate-700">
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
