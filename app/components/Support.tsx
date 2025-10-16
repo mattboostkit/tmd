@@ -85,14 +85,14 @@ const Support = () => {
 
   const handleDonation = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(`Processing donation of Â£${selectedAmount}`);
-    alert(`Thank you for your donation of Â£${selectedAmount}! This demo would normally redirect to a secure payment processor.`);
+    console.log(`Processing donation of £${selectedAmount}`);
+    alert(`Thank you for your donation of £${selectedAmount}! This demo would normally redirect to a secure payment processor.`);
   };
 
   const currentImpact =
     impactExamples.find((example) => example.amount === selectedAmount) ??
     (selectedAmount
-      ? { amount: selectedAmount, impact: `Your generous donation of Â£${selectedAmount} keeps our programmes running.` }
+      ? { amount: selectedAmount, impact: `Your generous donation of £${selectedAmount} keeps our programmes running.` }
       : null);
 
   return (
@@ -127,7 +127,7 @@ const Support = () => {
                       }`}
                       aria-pressed={isSelected}
                     >
-                      Â£{amount}
+                      £{amount}
                     </button>
                   );
                 })}
@@ -160,7 +160,7 @@ const Support = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <button type="submit" className="btn btn-primary w-full">
                 <Heart size={20} className="mr-2" aria-hidden="true" />
-                Donate Â£{selectedAmount || '0'} Once
+                Donate £{selectedAmount || '0'} Once
               </button>
               <button
                 type="button"
@@ -168,7 +168,7 @@ const Support = () => {
                 onClick={() => alert('Monthly donation setup would be implemented here.')}
               >
                 <Heart size={20} className="mr-2" aria-hidden="true" />
-                Donate Â£{selectedAmount || '0'} Monthly
+                Donate £{selectedAmount || '0'} Monthly
               </button>
             </div>
           </form>
